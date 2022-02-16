@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function index( $id = null, $name ) {
-        echo "<h1>Id: </h1>". $id." Név:".$name ;
-        return view( "services");
+    public function index() {
+        $name = "Béla";
+        $email = "bela@test.hu";
+
+        return view("services", compact("name","email"));
     }
 }
